@@ -1,0 +1,25 @@
+// Generated using `moon info`, DON'T EDIT IT
+package "bobzhang/open_in_browser"
+
+import {
+  "moonbitlang/async/types",
+  "moonbitlang/core/debug",
+}
+
+// Values
+pub fn commands(@types.Platform, String, env~ : Map[String, String], force? : Bool) -> Result[Array[Array[String]], String]
+
+pub async fn open(String, force? : Bool, env? : Map[String, String]) -> Outcome
+
+// Errors
+
+// Types and methods
+pub(all) enum Outcome {
+  Launched
+  Skipped(String)
+  Failed(String)
+} derive(Eq, @debug.Debug)
+
+// Type aliases
+
+// Traits
