@@ -36,7 +36,7 @@ pub fn commands(
   platform : @types.Platform,
   url : String,
   env~ : Map[String, String],
-  force? : Bool = false,
+  force~ : Bool = false,
 ) -> Result[Array[Array[String]], String] {
   let set = (name : String) => env.get(name) is Some(value) && !value.is_blank()
   if env.get("BROWSER") is Some(browser) && !browser.is_blank() {
@@ -101,7 +101,7 @@ pub fn commands(
 /// ```
 pub async fn open(
   url : String,
-  force? : Bool = false,
+  force~ : Bool = false,
   env? : Map[String, String],
 ) -> Outcome {
   let env = match env {
