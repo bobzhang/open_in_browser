@@ -1,5 +1,6 @@
 ///|
 /// What `open` did with a URL.
+#derive(Eq, Debug)
 pub(all) enum Outcome {
   /// A browser opener was started; the browser takes it from there. The opener
   /// is not waited on, so this does not prove a window appeared.
@@ -10,7 +11,7 @@ pub(all) enum Outcome {
   Skipped(String)
   /// No opener could be started; the last error.
   Failed(String)
-} derive(Eq, Debug)
+}
 
 ///|
 /// The commands that would open `url` in the default browser on `platform`,
