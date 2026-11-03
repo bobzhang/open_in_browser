@@ -14,11 +14,12 @@ pub async fn open(String, force? : Bool, env? : Map[String, String]) -> Outcome
 // Errors
 
 // Types and methods
+#derive(Eq, @debug.Debug)
 pub(all) enum Outcome {
   Launched
   Skipped(String)
   Failed(String)
-} derive(Eq, @debug.Debug)
+}
 
 // Type aliases
 
