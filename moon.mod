@@ -3,7 +3,7 @@ name = "bobzhang/open_in_browser"
 version = "0.1.2"
 
 import {
-  "moonbitlang/async@0.22.4",
+  "moonbitlang/async@0.22.10",
 }
 
 readme = "README.md"
